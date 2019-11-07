@@ -55,5 +55,12 @@ pipeline {
             '''
         }
       }
+        stage('Testing') {
+        steps {
+            sh '''
+             echo 'Hola'
+            '''
+        }
+      }
     }
 }
