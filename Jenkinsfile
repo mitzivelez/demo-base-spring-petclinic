@@ -37,13 +37,11 @@ pipeline {
                 git config --global user.email "mitzyoali11@hotmail.com"
                 git checkout master
                 git fetch --all
-                git pull origin develop
-                git fetch --all
-                git pull
+                git merge origin/develop
                 git remote set-url origin https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/mitzivelez/demo-base-spring-petclinic
                 git push -f origin master
                 git fetch --all
-                echo 'git merge to production .'
+                echo 'Merge Develop to Production'
                 '''
             }
           }
