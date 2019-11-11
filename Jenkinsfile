@@ -5,7 +5,7 @@ pipeline {
     GIT_SSH_COMMAND = "ssh -o StrictHostKeyChecking=no"
   }
     stages {
-      stage('runninf in develop environment') {
+      stage('running in develop environment') {
         steps {
             sh '''
               cd /home/cloud_user/chef-repo/
