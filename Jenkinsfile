@@ -5,9 +5,11 @@ pipeline {
     GIT_SSH_COMMAND = "ssh -o StrictHostKeyChecking=no"
   }
     stages {
-      stage('1st stage') {
+      stage('runninf in develop environment') {
         steps {
             sh '''
+              cd /home/cloud_user/
+              rm prueba.txt
               cd /home/cloud_user/chef-repo/
               knife ssh 'name:develop' 'sudo chef-client' -x cloud_user -P "${PASS_NODE}"
               cat "/home/cloud_user/prueba.txt"
