@@ -9,7 +9,7 @@ pipeline {
         steps {
             sh '''
               cd /home/cloud_user/
-              rm pruebas.txt
+              rm prueba.txt
               cd /home/cloud_user/chef-repo/
               knife ssh 'name:develop' 'sudo chef-client' -x cloud_user -P "${PASS_NODE}"
               cat "/home/cloud_user/prueba.txt"
